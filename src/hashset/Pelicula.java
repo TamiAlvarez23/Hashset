@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @author Tamara
  */
-public class Pelicula {
+public class Pelicula implements Comparator{
     private String titulo;
     private String director;
     private Integer duracion;
@@ -49,7 +49,7 @@ public class Pelicula {
         this.duracion = duracion;
     }
     
-    public static Comparator<Pelicula> compararDuracion=new Comparator<>(){
+    public static Comparator<Pelicula> compararDuracion=new Comparator<Pelicula>(){
       
         @Override
         public int compare(Pelicula p1,Pelicula p2){
@@ -58,7 +58,7 @@ public class Pelicula {
         
     };
     
-    public static Comparator<Pelicula> compararTitulo=new Comparator<>(){
+    public static Comparator<Pelicula> compararTitulo=new Comparator<Pelicula>(){
       
         @Override
         public int compare(Pelicula p1, Pelicula p2){
@@ -67,7 +67,7 @@ public class Pelicula {
         
     };
     
-     public static Comparator<Pelicula> compararDirector=new Comparator<>(){
+     public static Comparator<Pelicula> compararDirector=new Comparator<Pelicula>(){
       
         @Override
         public int compare(Pelicula p1, Pelicula p2){
@@ -100,6 +100,11 @@ public class Pelicula {
         return Objects.equals(this.titulo, peli.titulo);
         
         //return this.titulo.equals(peli.getTitulo());
+    }
+
+    @Override
+    public int compare(Object o1, Object o2) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
      
      
