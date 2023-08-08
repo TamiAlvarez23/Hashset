@@ -8,7 +8,8 @@ import java.util.*;
 
 /**
  *
- * @author Tamara
+ * @author tami
+ * 
  */
 public class Cine {
     private String nombre;
